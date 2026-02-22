@@ -51,8 +51,8 @@ case $opt in
  ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝
 EOF
 
-bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
-
+   bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
+   ;;
   4)
     exit 0
     ;;
