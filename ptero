@@ -39,8 +39,7 @@ echo " 3) EXIT"
 echo ""
 read -p "Select option [1-3]: " opt
 
-    show_menu
-    case $choice in
+case $choice in
         1) run_remote_script "https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script" "Install Panel" ;;
         2) run_remote_script "https://raw.githubusercontent.com/mahimxyzz/Vps/refs/heads/main/cd/wing2.sh" "WINGS INSTALLATION" ;;
         3) run_remote_script "https://raw.githubusercontent.com/mahimxyzz/Vps/refs/heads/main/cd/update2.sh" "PANEL UPDATE" ;;
