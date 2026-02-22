@@ -31,24 +31,29 @@ clear
 
 EOF
 
-    print_menu_option "1" "Install Panel"
-    print_menu_option "2" "Wings Installation"
-    print_menu_option "3" "Panel Update"
-    print_menu_option "4" "Uninstall Tools"
-    print_menu_option "5" "Blueprint Setup"
-    print_menu_option "6" "Cloudflare Setup"
-    print_menu_option "7" "Change Theme"
-    print_menu_option "8" "Tailscale (Install + Up)"
-    print_menu_option "9" "Minecraft Player Manager"
-    print_menu_option "10" "Jexactyl Installation"
-    print_menu_option "0" "Exit Manager"
+echo ""
+echo "{R}${BOLD} 1) Install Panel"
+echo "{Y}${BOLD} 2) Soon"
+echo "{G}${BOLD} 3) Soon"
+echo "{M}${BOLD} 3) EXIT"
+echo ""
+read -p "Select option [1-3]: " opt
 
-while true; do
-    case $choice in
-        1) run_remote_script "https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script" "Install Panel" ;;
-        2) run_remote_script "https://raw.githubusercontent.com/mahimxyzz/Vps/refs/heads/main/cd/wing2.sh" "WINGS INSTALLATION" ;;
-        3) run_remote_script "https://raw.githubusercontent.com/mahimxyzz/Vps/refs/heads/main/cd/update2.sh" "PANEL UPDATE" ;;
-        4)
+case $opt in
+  1)
+    clear
+    cat << "EOF"
+██╗██╗██╗  ██╗ ██████╗ ███████╗██╗   ██╗████████╗
+     ██║██║██║ ██╔╝██╔═══██╗╚══███╔╝╚██╗ ██╔╝╚══██╔══╝
+     ██║██║█████╔╝ ██║   ██║  ███╔╝  ╚████╔╝    ██║   
+██   ██║██║██╔═██╗ ██║   ██║ ███╔╝    ╚██╔╝     ██║   
+╚█████╔╝██║██║  ██╗╚██████╔╝███████╗   ██║      ██║   
+ ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝
+EOF
+
+bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
+
+  4)
     exit 0
     ;;
   *)
