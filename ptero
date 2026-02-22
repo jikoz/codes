@@ -32,10 +32,10 @@ clear
 EOF
 
 echo ""
-echo "{R}${BOLD} 1) Install Panel"
-echo "{Y}${BOLD} 2) Soon"
-echo "{G}${BOLD} 3) Soon"
-echo "{M}${BOLD} 3) EXIT"
+echo "{BLUE}${BOLD} 1) Install Panel"
+echo "{GREEN}${BOLD} 2) Soon"
+echo "{RED}${BOLD} 3) Soon"
+echo "{YELLOW}${BOLD} 3) EXIT"
 echo ""
 read -p "Select option [1-3]: " opt
 
