@@ -180,3 +180,7 @@ php artisan p:user:make
 
 sed -i '/^APP_ENVIRONMENT_ONLY=/d' .env
 echo "APP_ENVIRONMENT_ONLY=false" >> .env
+
+# SUCCESSFUL 
+
+echo -e "${GREEN}${BOLD}✓ Your Panel Will Be Accessable From: ${WHITE}${DOMAIN}${RESET}\n"
