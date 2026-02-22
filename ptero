@@ -54,10 +54,12 @@ EOF
    bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
    ;;
   2)
-    echo "${RED}${BOLD} SOON"
+    echo "SOON"
+    exit 0
     ;;
   3)
-    echo "${RED}${BOLD} SOON"
+    echo "SOON"
+    exit 0
     ;;
   4)
     exit 0
