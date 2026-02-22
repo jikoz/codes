@@ -32,10 +32,10 @@ clear
 EOF
 
 echo ""
-echo "${BLUE}${BOLD} 1) Install Panel"
-echo "${GREEN}${BOLD} 2) Install Wings"
-echo "${RED}${BOLD} 3) Soon"
-echo "${YELLOW}${BOLD} 4) EXIT"
+echo "${BLUE}${BOLD} 1) Install Panel {RESET}"
+echo "${GREEN}${BOLD} 2) Install Wings {RESET}"
+echo "${RED}${BOLD} 3) Tailscale {RESET}"
+echo "${YELLOW}${BOLD} 4) EXIT {RESET}"
 echo ""
 read -p "Select option [1-3]: " opt
 
@@ -54,11 +54,34 @@ EOF
    bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
    ;;
   2)
-    
+        clear
+    cat << "EOF"
+██╗██╗██╗  ██╗ ██████╗ ███████╗██╗   ██╗████████╗
+     ██║██║██║ ██╔╝██╔═══██╗╚══███╔╝╚██╗ ██╔╝╚══██╔══╝
+     ██║██║█████╔╝ ██║   ██║  ███╔╝  ╚████╔╝    ██║   
+██   ██║██║██╔═██╗ ██║   ██║ ███╔╝    ╚██╔╝     ██║   
+╚█████╔╝██║██║  ██╗╚██████╔╝███████╗   ██║      ██║   
+ ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝
+EOF
+
+   bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/wings)
     ;;
   3)
-    echo "SOON"
-    exit 0
+        cat << "EOF"
+██╗██╗██╗  ██╗ ██████╗ ███████╗██╗   ██╗████████╗
+     ██║██║██║ ██╔╝██╔═══██╗╚══███╔╝╚██╗ ██╔╝╚══██╔══╝
+     ██║██║█████╔╝ ██║   ██║  ███╔╝  ╚████╔╝    ██║   
+██   ██║██║██╔═██╗ ██║   ██║ ███╔╝    ╚██╔╝     ██║   
+╚█████╔╝██║██║  ██╗╚██████╔╝███████╗   ██║      ██║   
+ ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝
+EOF
+ echo "${BLUE}${BOLD} JikozYT Tailscale Installer{RESET}"
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
+echo "Agar Tailscale Install Hone Me Problem Aaraha Hai To Ye Command Dalo:"
+echo "sudo apt install systemctl -y"
+echo "systemctl start tailscaled"
+echo "tailscale up"
     ;;
   4)
     exit 0
