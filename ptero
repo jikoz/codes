@@ -34,7 +34,7 @@ EOF
 echo ""
 echo "1) Install Pterodactyl Panel"
 echo "2) Install Pterodactyl Wings"
-echo "3) Tailscale"
+echo "3) Install Tailscale"
 echo "4) HvmPanel3.1"
 echo "5) CloudFlare"
 echo ""
@@ -82,8 +82,10 @@ EOF
                 else
                     echo -e "✘ Incorrect confirmation. You typed: '${confirmation:-<empty>}"
    bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/wings)
+    fi
+done
 
-    ;;
+;;
   3)
 clear
     cat << "EOF"
@@ -127,8 +129,10 @@ EOF
     cd Vpanel3.1
     pip3 install flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
     python3 hvm.py
+    fi
+done
 
-    ;;
+;;
   5)
 clear
     cat << "EOF"
