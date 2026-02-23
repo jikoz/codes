@@ -38,9 +38,12 @@ echo "3) Install Tailscale (+ Up)"
 echo "4) Install HvmPanel3.1"
 echo "5) Install CloudFlare"
 echo ""
-read -p "Select option [1-3]: " opt
+while true; do
 
-case $opt in
+    echo ""
+    read -p "Select option [1-5]: " opt
+
+    case $opt in
   1)
     clear
     cat << "EOF"
@@ -52,7 +55,6 @@ case $opt in
  ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝  ╚═╝       ╚═╝
 EOF
                # Require user to type exactly "yes" to confirm
-while true; do
     echo -e "Are You Sure You Want To Install Pterodactyl Panel?, type yes and press Enter:"
     read -r confirmation
     if [[ "$confirmation" == "yes" ]]; then
@@ -74,7 +76,6 @@ done
 ╚█████╔╝██║██║  ██╗╚██████╔╝███████╗  ██║       ██
  ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝  ╚═╝       ╚═╝
 EOF
-            while true; do
                 echo -e "Are You Sure You Want To Install Pterodactyl Wings?, type yes and press Enter:"
                 read -r confirmation
                 if [[ "$confirmation" == "yes" ]]; then
@@ -115,7 +116,6 @@ clear
 ╚█████╔╝██║██║  ██╗╚██████╔╝███████╗  ██║       ██
  ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝  ╚═╝       ╚═╝
 EOF
-            while true; do
                 echo -e "Are You Sure You Want To Install HvmPanel?, type yes and press Enter:"
                 read -r confirmation
                 if [[ "$confirmation" == "yes" ]]; then
