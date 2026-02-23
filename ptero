@@ -34,7 +34,7 @@ EOF
 echo ""
 echo "1) Install Pterodactyl Panel"
 echo "2) Install Pterodactyl Wings"
-echo "3) Install Tailscale"
+echo "3) Install Tailscale + Up"
 echo "4) HvmPanel3.1"
 echo "5) CloudFlare"
 echo ""
