@@ -60,6 +60,8 @@ EOF
                 else
                     echo -e "✘ Incorrect confirmation. You typed: '${confirmation:-<empty>}"
    bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/script)
+
+    ;;
   2)
     clear
     cat << "EOF"
@@ -78,6 +80,7 @@ EOF
                 else
                     echo -e "✘ Incorrect confirmation. You typed: '${confirmation:-<empty>}"
    bash <(curl -s https://raw.githubusercontent.com/jikoz/codes/refs/heads/main/wings)
+
     ;;
   3)
 clear
@@ -96,6 +99,7 @@ echo "Agar Tailscale Install Hone Me Problem Aaraha Hai To Ye Command Dalo:"
 echo "sudo apt install systemctl -y"
 echo "systemctl start tailscaled"
 echo "tailscale up"
+
     ;;
   4)
 clear
@@ -121,6 +125,7 @@ EOF
     cd Vpanel3.1
     pip3 install flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
     python3 hvm.py
+
     ;;
   5)
 clear
@@ -144,10 +149,12 @@ sudo apt-get update && sudo apt-get install cloudflared
 
 clear
 echo "Enter Your Cloudflare Token To Connect Your Domain"
+
     ;;
   *)
     echo "❌ Invalid Option"
     sleep 1
+
         ;;
 esac
 done
