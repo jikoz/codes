@@ -32,8 +32,8 @@ clear
 EOF
 
 echo ""
-echo "1) Install Panel"
-echo "2) Install Wings"
+echo "1) Install Pterodactyl Panel"
+echo "2) Install Pterodactyl Wings"
 echo "3) Tailscale"
 echo "4) HvmPanel3.1"
 echo "5) CloudFlare"
