@@ -21,6 +21,15 @@ sleep 2
 echo "Starting Rdp Installation Process"
 sleep 2
 # Rdp Codes
+echo "Checking Root Permission"
+
+if [ "$EUID" -ne 0 ]; then
+  echo "❌ Please run this script as root (sudo)"
+  exit 1
+fi
+
+echo "Done Checking Root Permission ✅"
+sleep 2
 
 sudo apt update && sudo apt upgrade -y
 
