@@ -2,7 +2,7 @@
 
 clear
 # Watermark JikozYT
-echo "JikozYT Rdp Installer"
+echo "JikozYT Jexactyl Panel Installer"
 sleep 2
 
 # Banner
