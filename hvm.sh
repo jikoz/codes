@@ -51,6 +51,7 @@ case $opt in
     echo -e "${GREEN}HvmPanel3.1 Has Been Installed Successfully${RESET}"
     ;;
   2)
+  apt install docker.io -y
 docker run -d \
 --name hvm-panel \
 -p 5000:5000 \
