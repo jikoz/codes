@@ -52,8 +52,8 @@ case $opt in
     ;;
   2)
    cd
-   rm -rf Vpanel3.1
-   pip3 uninstall flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
+   rm -rf hvmpanel
+   pip3 uninstall -y flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
    echo -e "${GREEN}HvmPanel Has Been Removed Successfully${RESET}"
    ;;
 esac
