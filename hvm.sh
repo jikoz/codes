@@ -32,7 +32,7 @@ sleep 2
 # Options
 echo ""
 echo -e "${CYAN}1${RESET} ➤ Install HvmPanel3.1"
-echo -e "${CYAN}2${RESET} ➤ Install HvmPanel Latest"
+echo -e "${CYAN}2${RESET} ➤ Uninstall HvmPanel3.1"
 echo -e "${CYAN}3${RESET} ➤ Exit"
 read -p "Select option [1-3] ➜ " opt
 
@@ -51,12 +51,9 @@ case $opt in
     echo -e "${GREEN}HvmPanel3.1 Has Been Installed Successfully${RESET}"
     ;;
   2)
-  apt install docker.io -y
-docker run -d \
---name hvm-panel \
--p 5000:5000 \
---restart unless-stopped \
-hopingboyz/hvm-panel:latest
-echo -e "${GREEN}HvmPanel Latest Has Been Installed Successfully${RESET}"
-  ;;
+   cd
+   rm -rf Vpanel3.1
+   pip3 uninstall flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
+   echo -e "${GREEN}HvmPanel Has Been Removed Successfully${RESET}"
+   ;;
 esac
