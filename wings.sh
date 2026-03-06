@@ -229,4 +229,4 @@ else
     echo -e " ${B_GREEN}      1. Edit /etc/pterodactyl/config.yml with your node info${NC}"
     echo -e " ${B_GREEN}      2. Run: sudo systemctl start wings${NC}\n"
 fi
-
+esac
