@@ -57,3 +57,5 @@ docker run -d \
 --restart unless-stopped \
 hopingboyz/hvm-panel:latest
 echo -e "${GREEN}HvmPanel Latest Has Been Installed Successfully${RESET}"
+  ;;
+esac
