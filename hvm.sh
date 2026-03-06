@@ -42,9 +42,9 @@ case $opt in
     sleep 1
     sudo apt update
     sudo apt install git -y
-    git clone https://github.com/DreamHost2ws/Vpanel3.1.git
+    git clone https://github.com/jikoz/hvmpanel.git
     sudo apt install python3-pip -y
-    cd Vpanel3.1
+    cd hvmpanel
     pip3 install flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
     python3 hvm.py
     echo "Create Tunel And Connect It Into Your Vps With localhost:3000"
