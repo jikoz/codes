@@ -157,9 +157,36 @@ check_success "SSL certificate ready!" "Certificate generation failed"
 print_header "🛠️ INSTALLING 'wing' HELPER COMMAND"
 print_status "Deploying quick command helper"
 sudo tee /usr/local/bin/wing > /dev/null <<'EOF'
+#!/bin/bash
+echo -e "\033[0;95m\033[1m
+╔════════════════════════════════════════════════════╗
+║               ${B_WHITE}QUICK CONFIGURE${PURPLE}                ║
+╚════════════════════════════════════════════════════╝
+\033[0m"
+echo
+echo -e "\033[0;96m\033[1m🚀 Start Wings:${NC}       \033[0;92m\033[1msudo systemctl start wings\033[0m"
+echo -e "\033[0;96m\033[1m📊 Status:${NC}            \033[0;92m\033[1msudo systemctl status wings\033[0m"
+echo -e "\033[0;96m\033[1m📜 Live Logs:${NC}         \033[0;92m\033[1mjournalctl -u wings -f\033[0m"
+echo
+echo -e "\033[0;93m\033[1m⚠️  Important: Map port 8080 → 443 in node settings!\033[0m"
+echo
+echo -e "\033[0;94m\033[1m🎧 Support Discord:${NC} https://discord.gg/EHBvzYbh57\033[0m"
+echo
+EOF
+sudo chmod +x /usr/local/bin/wing
+check_success "'wing' command installed!" "Helper creation failed"
 
-# Auto Configure
+# Complete message
+print_header "🎉 INSTALLATION COMPLETE! 🎉"
+echo -e "${B_GREEN}      🦅 Pterodactyl Wings is fully installed and ready to fly!${NC}\n"
+echo -e "${B_WHITE}      📋 Next Steps:${NC}"
+echo -e " ${B_CYAN}      • Use auto-config below or edit config manually${NC}"
+echo -e " ${B_CYAN}      • Start Wings:${B_GREEN} sudo systemctl start wings${NC}"
+echo -e " ${B_CYAN}      • Quick help anytime:${B_GREEN} wing${NC}\n"
 
+# Auto-config
+echo -e "${B_PURPLE}      🔧 Auto-configure Wings now?${NC}"
+read -p "$(echo -e "${B_YELLOW}      [y/N]: ${NC}")" AUTO_CONFIG
 if [[ "$AUTO_CONFIG" =~ ^[Yy]$ ]]; then
     print_header "⚡ AUTO CONFIGURATION ⚡"
     echo -e "${B_YELLOW}      🔑 Enter your node details from Panel → Nodes → Configuration:${NC}\n"
@@ -176,7 +203,7 @@ token_id: ${TOKEN_ID}
 token: ${TOKEN}
 api:
   host: 0.0.0.0
-  port: 8443
+  port: 8080
   ssl:
     enabled: true
     cert: /etc/certs/wing/fullchain.pem
@@ -202,3 +229,4 @@ else
     echo -e " ${B_GREEN}      1. Edit /etc/pterodactyl/config.yml with your node info${NC}"
     echo -e " ${B_GREEN}      2. Run: sudo systemctl start wings${NC}\n"
 fi
+
