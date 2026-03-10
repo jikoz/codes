@@ -32,9 +32,9 @@ sleep 2
 # Options
 echo ""
 echo -e "${CYAN}1${RESET} ➤ Install HvmPanel3.1"
-echo -e "${CYAN}1${RESET} ➤ Install HvmPanel5.1 (Latest)"
-echo -e "${CYAN}2${RESET} ➤ Uninstall HvmPanel3.1"
-echo -e "${CYAN}3${RESET} ➤ Exit"
+echo -e "${CYAN}2${RESET} ➤ Install HvmPanel5.1 (Latest)"
+echo -e "${CYAN}3${RESET} ➤ Uninstall HvmPanel3.1"
+echo -e "${CYAN}4${RESET} ➤ Exit"
 read -p "Select option [1-3] ➜ " opt
 
 case $opt in
@@ -82,5 +82,8 @@ case $opt in
    rm -rf hvmpanel
    pip3 uninstall -y flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
    echo -e "${GREEN}HvmPanel Has Been Removed Successfully${RESET}"
+   ;;
+  4)
+   exit 0
    ;;
 esac
