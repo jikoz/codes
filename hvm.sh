@@ -35,7 +35,7 @@ echo -e "${CYAN}1${RESET} ➤ Install HvmPanel3.1"
 echo -e "${CYAN}2${RESET} ➤ Install HvmPanel5.1 (Latest)"
 echo -e "${CYAN}3${RESET} ➤ Uninstall HvmPanel3.1"
 echo -e "${CYAN}4${RESET} ➤ Exit"
-read -p "Select option [1-3] ➜ " opt
+read -p "Select option [1-4] ➜ " opt
 
 case $opt in
   1)
@@ -86,4 +86,32 @@ case $opt in
   4)
    exit 0
    ;;
+  *)
+   echo -e "${RED}${BOLD}❌ INVALID OPTION CHOOSE BETWEEN 1-4${RESET}"
+   echo -e "${YELLOW}${BOLD}PRESS ENTER TO GO BACK TO MENU${RESET}"
+   read -p ""
+   # Watermark JikozYT
+echo "JikozYT HvmPanel3.1 Installer"
+sleep 2
+
+# Banner
+cat << "EOF"
+██╗██╗██╗  ██╗ ██████╗ ███████╗██╗   ██╗████████╗
+     ██║██║██║ ██╔╝██╔═══██╗╚══███╔╝╚██╗ ██╔╝╚══██╔══╝
+     ██║██║█████╔╝ ██║   ██║  ███╔╝  ╚████╔╝    ██║   
+██   ██║██║██╔═██╗ ██║   ██║ ███╔╝    ╚██╔╝     ██║   
+╚█████╔╝██║██║  ██╗╚██████╔╝███████╗   ██║      ██║   
+ ╚════╝ ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝
+EOF
+echo "╔══════════════════╗"
+echo "║CODE MADE BY JIKOZYT ║"
+echo "╚══════════════════╝"
+sleep 2
+# Options
+echo ""
+echo -e "${CYAN}1${RESET} ➤ Install HvmPanel3.1"
+echo -e "${CYAN}2${RESET} ➤ Install HvmPanel5.1 (Latest)"
+echo -e "${CYAN}3${RESET} ➤ Uninstall HvmPanel3.1"
+echo -e "${CYAN}4${RESET} ➤ Exit"
+read -p "Select option [1-4] ➜ " opt
 esac
