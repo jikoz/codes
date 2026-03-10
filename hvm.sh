@@ -32,13 +32,14 @@ sleep 2
 # Options
 echo ""
 echo -e "${CYAN}1${RESET} ➤ Install HvmPanel3.1"
+echo -e "${CYAN}1${RESET} ➤ Install HvmPanel5.1 (Latest)"
 echo -e "${CYAN}2${RESET} ➤ Uninstall HvmPanel3.1"
 echo -e "${CYAN}3${RESET} ➤ Exit"
 read -p "Select option [1-3] ➜ " opt
 
 case $opt in
   1)
-    echo "Started Installing Pterodactyl Panel ✨"
+    echo -e "${BLUE}${BOLD}Started Installing Hvm Panel3.1 ✨${RESET}"
     sleep 1
     sudo apt update
     sudo apt install git -y
@@ -47,10 +48,36 @@ case $opt in
     cd hvmpanel
     pip3 install flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
     python3 hvm.py
-    echo "Create Tunel And Connect It Into Your Vps With localhost:3000"
-    echo -e "${GREEN}HvmPanel3.1 Has Been Installed Successfully${RESET}"
     ;;
   2)
+    echo -e "${BLUE}${BOLD}Started Installing Hvm Panel5.1 (Latest) ✨${RESET}"
+    sleep 1
+    echo -e "${YELLOW}${BOLD}UPDATING PACKAGES ✨${RESET}"
+    sleep 1
+    sudo apt update
+    echo -e "${YELLOW}${BOLD}INSTALLING GIT ✨${RESET}"
+    sleep 1
+    sudo apt install git -y
+    echo -e "${YELLOW}${BOLD}INSTALLING UNZIP ✨${RESET}"
+    sleep 1
+    apt install unzip -y
+    echo -e "${YELLOW}${BOLD}CLONING REPOSITORY ✨${RESET}"
+    sleep 1
+    git clone https://github.com/jikoz/hvm5.1.git
+    echo -e "${YELLOW}${BOLD}INSTALLING PYTHON3 ✨${RESET}"
+    sleep 1
+    sudo apt install python3-pip -y
+    echo -e "${YELLOW}${BOLD}UNZIPING HVM5.1 FILE ✨${RESET}"
+    sleep 1
+    unzip hvm5.1.zip
+    echo -e "${YELLOW}${BOLD}OPENING HVM DIRECTORY ✨${RESET}"
+    sleep 1
+    cd hvm
+    echo -e "${YELLOW}${BOLD}STARTING HVM PANEL WITH PYTHON3 ✨${RESET}"
+    sleep 1
+    python3 hvm.py
+    ;;
+  3)
    cd
    rm -rf hvmpanel
    pip3 uninstall -y flask flask-socketio flask_login docker paramiko python-dotenv psutil flask-limiter ecdsa
