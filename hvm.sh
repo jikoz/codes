@@ -88,8 +88,10 @@ case $opt in
    ;;
   *)
    echo -e "${RED}${BOLD}❌ INVALID OPTION CHOOSE BETWEEN 1-4${RESET}"
+   sleep 2
    echo -e "${YELLOW}${BOLD}PRESS ENTER TO GO BACK TO MENU${RESET}"
    read -p ""
+   clear
    # Watermark JikozYT
 echo "JikozYT HvmPanel3.1 Installer"
 sleep 2
